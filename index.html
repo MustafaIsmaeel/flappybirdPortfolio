@@ -1,67 +1,87 @@
-<!-- ========== index.html ========== -->
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mustafa — Game Dev Portfolio (Flappy Bird)</title>
-<link rel="stylesheet" href="css/style.css" />
+<title>Flappy Bird — Mustafa • Project</title>
+<meta name="description" content="Flappy Bird — Web game (portfolio) — Glass & Neon theme" />
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header">
+<header class="topbar">
 <div class="inner">
-<h1 class="brand">Mustafa — Game Dev</h1>
+<a class="logo" href="/">Mustafa<span>.dev</span></a>
 <nav>
-<a href="#game">Game</a>
-<a href="#projects">Projects</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
+<a href="/">Back to portfolio</a>
+<a href="https://github.com/mustafaismaeel/flappybird-portfolio" target="_blank" rel="noopener">View on GitHub</a>
 </nav>
 </div>
 </header>
 
 
-<main>
-<section id="hero" class="hero">
-<div class="hero-inner">
-<h2>Flappy Bird — Portfolio Edition</h2>
-<p>Small, polished web game demonstrating physics, collision, responsive UI, and deploy-ready structure.</p>
-<div class="hero-actions">
-<a class="btn" href="#game">Play Now</a>
-<a class="btn ghost" href="#projects">See Projects</a>
+<main class="hero">
+<div class="inner hero-grid">
+<section class="panel game-panel">
+<h1>Flappy Bird<span class="muted"> — Portfolio Build</span></h1>
+<p class="lead">A compact, responsive Flappy Bird remake built with HTML5 Canvas — polished glass UI + neon highlights. Play, inspect the code, and fork the project.</p>
+
+
+<div class="game-wrap">
+<canvas id="gameCanvas" width="420" height="700" aria-label="Flappy Bird game canvas"></canvas>
+<div class="hud">
+<div class="score">Score: <span id="score">0</span></div>
+<div class="controls">
+<button id="startBtn" class="btn">Start / Restart</button>
+<label class="lbl"><input type="checkbox" id="debug"> Hitboxes (D)</label>
 </div>
 </div>
-<img class="hero-art" src="assets/hero-bird.svg" alt="bird illustration"/>
+</div>
+
+
+<div class="notes">
+<p><strong>Controls:</strong> Space / Click / Tap to flap. Press <kbd>D</kbd> to toggle hitboxes.</p>
+<p><strong>Features:</strong> Responsive canvas scaling, local highscore, WebAudio cues, debug mode.</p>
+</div>
 </section>
 
 
-<section id="game" class="panel">
-<div class="panel-inner">
-<div class="game-column">
-<div class="play-area">
-<canvas id="gameCanvas" width="420" height="700"></canvas>
-<div class="game-ui">
-<div class="scoreboard">Score: <span id="score">0</span></div>
-<button id="startBtn" class="btn">Start / Restart</button>
-</div>
-<div class="controls-note">Tap or click to flap. Use Spacebar on desktop.</div>
-</div>
-</div>
-
-
-<aside class="info-column">
-<h3>About this build</h3>
-<ul>
-<li>Engine: Vanilla JavaScript + HTML5 Canvas</li>
-<li>Responsive layout & mobile touch controls</li>
-<li>Highscore saved to <code>localStorage</code></li>
-<li>Debug mode (hitboxes) & basic sound FX</li>
+<aside class="panel info-panel">
+<h3>Project Info</h3>
+<ul class="meta">
+<li><strong>Engine</strong>: Vanilla JavaScript (Canvas)</li>
+<li><strong>Assets</strong>: SVG/PNG + WAV (included placeholders)</li>
+<li><strong>Deploy</strong>: GitHub Pages (enable Pages → Branch: main, folder: /)</li>
 </ul>
 
 
-<h4>Assets included</h4>
-<ul>
-<li>assets/bird.svg — scalable bird art</li>
-<li>assets/pipe.svg — scalable pipe art</li>
-<li>assets/bg-layer.png — background parallax</li>
+<h4>Screenshots / GIFs</h4>
+<div class="thumbs">
+<div class="thumb" aria-hidden="true">(screenshot)</div>
+<div class="thumb" aria-hidden="true">(screenshot)</div>
+</div>
+
+
+<h4>Extend this</h4>
+<ol>
+<li>Animated sprite sheet & shader effects</li>
+<li>Online leaderboard (server)</li>
+<li>Powerups, difficulty levels, sound settings</li>
+</ol>
+
+
+<h4>Back to main portfolio</h4>
+<!-- Local path to your uploaded portfolio file (use this path in your environment) -->
+<p><a href="/mnt/data/bf87f6e4-4dce-4e17-8da6-6470e9b177de.html">Open main portfolio HTML (local)</a></p>
+</aside>
+</div>
+</main>
+
+
+<footer class="site-footer">
+<div class="inner">© 2025 Mustafa Alsaegh — Flappy Bird Portfolio</div>
+</footer>
+
+
+<script src="js/game.js"></script>
+</body>
 </html>
